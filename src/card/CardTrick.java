@@ -10,23 +10,50 @@ package card;
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author srinivsi
  */
+import java.util.Scanner;
+
 public class CardTrick {
     
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Card[] magicHand = new Card[7];
+        Scanner input = new Scanner(System.in);
         
-        for (int i=0; i<magicHand.length; i++)
-        {
+        // Generate random cards for magicHand
+        for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            c.setValue(c.randomValue());
+            c.setSuit(Card.SUITS[c.randomSuit()]);
+            magicHand[i] = c;
         }
         
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
-        // add one luckcard hard code 2,clubs
+        // Print the cards in magicHand
+        for (Card magicHandx : magicHand) {
+            System.out.println((magicHandx.getSuit() + " " + magicHandx.getValue()));
+        }
+        
+        // Ask the user for a card
+        System.out.println("Enter a card value (1-13):");
+        int value = input.nextInt();
+        System.out.println("Enter a suit (0-3 where 0 = Hearts, 1 = Diamonds, 2 = Clubs, 3 = Spades):");
+        int suit = input.nextInt();
+        System.out.println("Your card is: " + value + " of " + suit);
+        
+        // Check if the user's card matches any card in magicHand
+        boolean found = false;
+        for (Card magicHandx : magicHand) {
+            if (value == magicHandx.getValue() && suit == magicHandx.getSuitIndex()) {
+                found = true;
+                break;
+            }
+        }
+        
+//         Report the result
+//        if (found) {
+//            System.out.println("Well done! Your card is in the magic hand.");
+//        } else {
+//            System.out.println("Sorry, your card is not in the magic hand.");
+//        }
+//        
+//        input.close();
     }
-    
 }

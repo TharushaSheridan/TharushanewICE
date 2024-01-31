@@ -46,7 +46,21 @@ public class Card {
     public void setValue(int value) {
         this.value = value;
     }
-   
-   
-    
+    public int randomSuit()
+    {
+    int value= (int)(Math.random()*4)+0;
+        return value;
+    }
+    public int randomValue()
+    {
+        return (int)(Math.random()*13)+1;
+    }
+    public int getSuitIndex() {
+        for (int i = 0; i < SUITS.length; i++) {
+            if (suit.equals(SUITS[i])) {
+                return i;
+            }
+        }
+        return -1; 
+    }
 }
