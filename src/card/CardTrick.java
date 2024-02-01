@@ -50,9 +50,11 @@ public class CardTrick {
  //        Report the result
          if (found) {
          System.out.println("Well done! Your card is in the magic hand.");
-         } else {            System.out.println("Sorry, your card is not in the magic hand.");
+         } else
+         {System.out.println("Sorry, your card is not in the magic hand.");
         }
         
         input.close();
     }
 }
+
