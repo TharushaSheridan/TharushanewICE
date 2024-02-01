@@ -26,15 +26,15 @@ public class CardTrick {
             c.setSuit(Card.SUITS[c.randomSuit()]);
             magicHand[i] = c;
         }
-        Card luckyCard = new Card();
-        luckyCard.setValue(7);
-        luckyCard.setSuit("Hearts");
+//        Card luckyCard = new Card();
+//        luckyCard.setValue(7);
+//        luckyCard.setSuit("Hearts");
         
         // Print the cards in magicHand
         for (Card magicHandx : magicHand) {
             System.out.println((magicHandx.getSuit() + " " + magicHandx.getValue()));
         }
-        System.out.println("Lucky Card: " + luckyCard.getSuit() + " " + luckyCard.getValue());
+//        System.out.println("Lucky Card: " + luckyCard.getSuit() + " " + luckyCard.getValue());
         
         // Ask the user for a card
         System.out.println("Enter a card value (1-13):");
@@ -51,11 +51,11 @@ public class CardTrick {
                 break;
             }
 //this is a comment to check
-        }
-         if (!found && value == luckyCard.getValue() && suit == luckyCard.getSuitIndex()) {
-            found = true;
-        }
-        
+//        }
+//         if (!found && value == luckyCard.getValue() && suit == luckyCard.getSuitIndex()) {
+//            found = true;
+//        }
+//        
  //        Report the result
          if (found) {
          System.out.println("Well done! Your card is in the magic hand.");
