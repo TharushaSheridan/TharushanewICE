@@ -49,7 +49,7 @@ public class CardTrick {
             if (value == magicHandx.getValue() && suit == magicHandx.getSuitIndex()) {
                 found = true;
                 break;
-            }
+            }//
 //this is a comment to check
         }
 //         if (!found && value == luckyCard.getValue() && suit == luckyCard.getSuitIndex()) {
