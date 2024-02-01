@@ -51,11 +51,11 @@ public class CardTrick {
                 break;
             }
 //this is a comment to check
-//        }
+        }
 //         if (!found && value == luckyCard.getValue() && suit == luckyCard.getSuitIndex()) {
 //            found = true;
 //        }
-//        
+        
  //        Report the result
          if (found) {
          System.out.println("Well done! Your card is in the magic hand.");
